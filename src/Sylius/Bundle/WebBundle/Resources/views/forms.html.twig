@@ -70,7 +70,7 @@
     {% if widget == 'single_text' %}
         {{ block('form_widget_simple') }}
     {% else %}
-        {% set vars = widget == 'text' ? { 'attr': { 'size': 1, 'style': 'width: 20px; display: inline;' }} : {} %}
+        {% set vars = widget == 'text' ? { 'attr': { 'size': 1, 'style': 'width: 40px; display: inline;' }} : {} %}
         {{ form_widget(form.hour, vars) }}{% if with_minutes %}:{{ form_widget(form.minute, vars) }}{% endif %}{% if with_seconds %} {{ form_widget(form.second, vars) }}{% endif %}
     {% endif %}
 {% endspaceless %}
@@ -78,7 +78,7 @@
 
 {% block form_row %}
 {% spaceless %}
-    <div class="form-group {% if errors|length > 0 %}has-error{% endif %}">
+    <div class="form-group{% if errors|length > 0 %} has-error{% endif %}">
         {{ form_label(form) }}
         <div class="col-lg-10">
         {{ form_widget(form) }}

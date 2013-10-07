@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="page-header">
-<h1>{{ 'sylius.variant.create_header'|trans|raw }}</h1>
+    <h1><i class="icon-plus-sign"></i> {{ 'sylius.variant.create_header'|trans|raw }}</h1>
 </div>
 
 <form action="{{ path('sylius_backend_variant_create', {'productId': variant.product.id}) }}" method="post" class="form-horizontal" {{ form_enctype(form) }} novalidate>
